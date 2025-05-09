@@ -41,4 +41,4 @@ fig = px.scatter_3d(
 fig.update_traces(marker=dict(size=point_size))
 
 # Mostrar gráfico
-st.plotly_chart(fig, use_container_width=False, width=1200, height=1200)
+st.plotly_chart(fig, use_container_width=False, width=1200, height=2400)
