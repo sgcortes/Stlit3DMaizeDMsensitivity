@@ -5,13 +5,16 @@ import pandas as pd
 import plotly.express as px
 
 # Leer datos desde archivo (o usa synthetic_df directamente si lo cargas antes)
-df = pd.read_excel("Synthetic_Maize_Predictions.xlsx")
+#df = pd.read_excel("Synthetic_Maize_Predictions.xlsx")
+
+# Leer nuevamente el DataFrame desde el archivo CSV
+synthetic_df_csv = pd.read_csv("Synthetic_Maize_Predictions.csv")
 
 # Asegurar tipo correcto
 df["Condition"] = df["Condition"].astype(int)
 
 # Mapeo de colores y etiquetas
-color_labels = {1: "Favorable conds", -1: "Unfavorable conds", 0: "Regular conds"}
+color_labels = {1: "Favorable conds", -1: "Unfavorable conds", 0: "Intermediate conds"}
 df["Condition_Label"] = df["Condition"].map(color_labels)
 
 # Crear gráfico 3D interactivo
@@ -24,7 +27,7 @@ fig = px.scatter_3d(
     color_discrete_map={
         "Favorable conds": "green",
         "Unfavorable conds": "red",
-        "Regular conds": "gray"
+        "Intermediate conds": "gray"
     },
     title="3D Scatter: Growing Season vs Radiation vs Predicted kgDM/ha",
     opacity=0.8
