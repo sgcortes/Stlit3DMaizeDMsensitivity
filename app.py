@@ -8,8 +8,8 @@ import plotly.express as px
 #df = pd.read_excel("Synthetic_Maize_Predictions.xlsx")
 
 # Leer nuevamente el DataFrame desde el archivo CSV
-synthetic_df_csv = pd.read_csv("Synthetic_Maize_Predictions.csv")
-
+synthetic_df_csv = pd.read_csv("Synthetic_Maize_Predictions.csv",encoding="latin1")
+df = synthetic_df_csv
 # Asegurar tipo correcto
 df["Condition"] = df["Condition"].astype(int)
 
@@ -17,7 +17,7 @@ df["Condition"] = df["Condition"].astype(int)
 color_labels = {1: "Favorable conds", -1: "Unfavorable conds", 0: "Intermediate conds"}
 df["Condition_Label"] = df["Condition"].map(color_labels)
 
-# Crear gr·fico 3D interactivo
+# Crear gr√°fico 3D interactivo
 fig = px.scatter_3d(
     df,
     x="GrowingSeason(day)",
