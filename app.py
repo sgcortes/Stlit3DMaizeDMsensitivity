@@ -15,7 +15,7 @@ df["Condition_Label"] = df["Condition"].map(color_labels)
 
 # --- INTERFAZ STREAMLIT ---
 
-#st.title("Dry Matter Forage Maize Yield - 3D Interactive Analysis")
+st.title("Dry Matter Forage Maize Yield - 3D Interactive Analysis")
 
 # Selector para tamaño de punto
 point_size = st.slider("Select marker size", min_value=1, max_value=10, value=3)
@@ -33,7 +33,7 @@ fig = px.scatter_3d(
         "Unfavorable conds": "red",
         "Intermediate conds": "gray"
     },
-    title=f"3D Scatter: Predicted Dry Matter kg/ha vs Growing Season and Radiation ",
+    #title=f"3D Scatter: Predicted Dry Matter kg/ha vs Growing Season and Radiation ",
     opacity=0.8
 )
 
