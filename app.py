@@ -204,7 +204,6 @@ with col2:
         width=1100,
         height=800
     )
-    '''
-
     st.plotly_chart(fig, use_container_width=True)
+    '''
 
