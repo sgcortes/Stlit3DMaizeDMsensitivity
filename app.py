@@ -25,6 +25,7 @@ z_axis = st.selectbox("Select Z-axis variable", options=[
     "Predicted_kgDM/ha", "GrowingSeason(day)", "Radiation(Mj/m2day)"
 ], index=0)
 '''
+z_axis = "Predicted_kgDM/ha"
 # Crear gráfico interactivo con opciones seleccionadas
 fig = px.scatter_3d(
     df,
@@ -37,7 +38,7 @@ fig = px.scatter_3d(
         "Unfavorable conds": "red",
         "Intermediate conds": "gray"
     },
-    title=f"3D Scatter: Growing Season vs Radiation vs {z_axis}",
+    title=f"3D Scatter: Predicted Dry Matter vs Growing Season and Radiation ",
     opacity=0.8
 )
 
