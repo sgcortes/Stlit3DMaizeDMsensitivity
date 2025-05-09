@@ -86,4 +86,4 @@ with col2:
         opacity=0.8
     )
     fig.update_traces(marker=dict(size=point_size))
-    st.plotly_chart(fig, use_container_width=True, height=900)
+    st.plotly_chart(fig, use_container_width=True, height=1400)
