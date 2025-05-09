@@ -19,12 +19,7 @@ st.title("Dry Matter Forage Maize Yield - 3D Interactive Analysis")
 
 # Selector para tamaño de punto
 point_size = st.slider("Select marker size", min_value=1, max_value=10, value=3)
-'''
-# Selector para el eje Z
-z_axis = st.selectbox("Select Z-axis variable", options=[
-    "Predicted_kgDM/ha", "GrowingSeason(day)", "Radiation(Mj/m2day)"
-], index=0)
-'''
+
 z_axis = "Predicted_kgDM/ha"
 # Crear gráfico interactivo con opciones seleccionadas
 fig = px.scatter_3d(
@@ -38,7 +33,7 @@ fig = px.scatter_3d(
         "Unfavorable conds": "red",
         "Intermediate conds": "gray"
     },
-    title=f"3D Scatter: Predicted Dry Matter vs Growing Season and Radiation ",
+    title=f"3D Scatter: Predicted Dry Matter kg/ha vs Growing Season and Radiation ",
     opacity=0.8
 )
 
