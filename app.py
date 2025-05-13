@@ -23,7 +23,7 @@ color_map = {1: "green", -1: "red", 0: "gray"}
 df["Color"] = df["Condition"].map(color_map)
 
 # Interfaz de control
-st.title("🌽 Maize Yield Prediction - 3D Surface Fit & Scatter")
+st.title("🌽 Maize Dry MAtter Yield Prediction - Dependence from Growinw season & Radiation")
 col1, col2 = st.columns([1, 5])
 
 with col1:
