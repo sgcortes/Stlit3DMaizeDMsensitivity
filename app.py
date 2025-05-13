@@ -92,7 +92,7 @@ with col2:
     # Crear figura
     fig = go.Figure(data=data)
     fig.update_layout(
-        title=f"3D Scatter + Polynomial Surface (degree {poly_degree})",
+        title=f"Dry Matter kgDM/ha + Polynomial Surface (degree {poly_degree})",
         scene=dict(
             xaxis_title='Growing Season (days)',
             yaxis_title='Radiation (MJ/m2/day)',
